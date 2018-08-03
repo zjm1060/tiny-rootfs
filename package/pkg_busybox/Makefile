@@ -22,6 +22,8 @@ insdirs ${INSDIR}/sbin ${INSDIR}/etc:
 	mkdir -p ${INSDIR}/dev
 	mkdir -p ${INSDIR}/sys
 	mkdir -p ${INSDIR}/lib
+	mkdir -p ${INSDIR}/run
+	ln -s /tmp/media ${INSDIR}/media
 
 busybox_install: insdirs ${BUSYBOX}/busybox
 	${TOP}/package/pinstall ${TOP}/package/pkg_busybox/pkg/ ${INSDIR}/
@@ -29,3 +31,5 @@ busybox_install: insdirs ${BUSYBOX}/busybox
 	echo ${VERSION} > ${INSDIR}/etc/version
 	sudo rm -fr ${INSDIR}/dev/console
 	sudo mknod ${INSDIR}/dev/console c 5 1
+	 mkcramfs ${INSDIR} ram.img
+

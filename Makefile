@@ -1,9 +1,9 @@
 VERSION	= 0.0.3
 KEXEC	= kexec-tools-2.0.1
 BUSYBOX	= busybox-1.22.0
-ALSA-LIB= alsa-lib-1.0.27
-ALSA-UTIL= alsa-utils-1.0.27
-ALSA-DIR= alsa-dir
+#ALSA-LIB= alsa-lib-1.0.27
+#ALSA-UTIL= alsa-utils-1.0.27
+#ALSA-DIR= alsa-dir
 HOST	=
 CROSS	=
 O	=
@@ -40,13 +40,13 @@ clean:
 	sudo rm -fr ${INSDIR}
 	rm -fr ${BUSYBOX}
 	rm -fr ${KEXEC}
-	rm -fr ${ALSA-LIB}
-	rm -fr ${ALSA-UTIL}
-	rm -fr ${ALSA-DIR}
-	rm -fr ${ALSA-DIR}no
+#	rm -fr ${ALSA-LIB}
+#	rm -fr ${ALSA-UTIL}
+#	rm -fr ${ALSA-DIR}
+#	rm -fr ${ALSA-DIR}no
 
 mrproper: clean
 	rm -fr ${BUSYBOX}.tar.bz2
 	rm -fr ${KEXEC}.tar.bz2
-	rm -fr ${ALSA-LIB}.tar.bz2
-	rm -fr ${ALSA-UTIL}.tar.bz2
+#	rm -fr ${ALSA-LIB}.tar.bz2
+#	rm -fr ${ALSA-UTIL}.tar.bz2
